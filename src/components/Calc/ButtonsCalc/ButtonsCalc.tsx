@@ -1,7 +1,7 @@
 import React from "react";
 import "./ButtonsCalc.css";
 import {connect} from "react-redux";
-import {addActionCreator, deleteCountingCreator} from "../../../redux/reducers/calcReducer";
+import {addActionCreator, CalculateActionCreator, deleteCountingCreator} from "../../../redux/reducers/calcReducer";
 
 const ButtonsCalc = (props:any) => {
         const num:number = 9;
@@ -15,6 +15,12 @@ const ButtonsCalc = (props:any) => {
                     props.deleteCounting()
                 }} className="btn-elem">
                     <span>DELETE</span>
+                </div>
+
+                <div onClick={() => {
+                    props.calculate()
+                }} className="btn-elem">
+                    <span>calculate</span>
                 </div>
             </div>
    )
@@ -30,6 +36,10 @@ const mapDispatchToProps = (dispatch:any ) => {
 
         deleteCounting() {
             dispatch(deleteCountingCreator())
+        },
+
+        calculate() {
+            dispatch(CalculateActionCreator())
         }
     }
 }
