@@ -1,0 +1,19 @@
+.btn-elem {
+    width: 60px;
+    height: 60px;
+    background: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.btns-wrap {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px auto;
+    justify-content: center;
+}
